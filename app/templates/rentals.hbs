@@ -1,0 +1,19 @@
+{{page-title "Rentals"}}
+{{#let this.model as |item|}}
+    <AboutCard
+    @text={{item.attributes.title}}
+    @content="Nice find! This looks like a nice place to stay near {{item.attributes.city}}"
+    @r_text="share on twitter"/>
+    <div class="row p-3 m-3">
+        <Image @img={{item.attributes.image}} @width="50"/>
+        <div class="w-50">
+            <h2><b>About {{item.attributes.title}}</b></h2>
+            <p><b>Owner</b>: <i>{{item.attributes.owner}}</i></p>
+            <p><b>Type</b>: <i>{{item.attributes.category}}</i></p>
+            <p><b>Location</b>: <i>{{item.attributes.city}}</i></p>
+            <p><b>Number Of bedrooms</b>: <i>{{item.attributes.bedrooms}}</i></p>
+            <p>{{item.attributes.description}}</p>
+        </div>
+    </div>
+    
+{{/let}}

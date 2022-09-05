@@ -1,0 +1,19 @@
+<section class="text-center my-5">
+    <label for="where" class="h3">Where would you like to stay?</label><br>
+    <Input @type="text" class="w-50" id="where" {{on "input" this.route_name}}/>
+</section>
+<ul class="list-inline">
+    {{#each this.arr as |items|}}
+    <li class="mt-5 bg-light p-4"> 
+        <ListCard
+            @img={{items.attributes.image}}
+            @name={{items.attributes.title}}
+            @owner={{items.attributes.owner}}
+            @route={{items.id}}
+            @type={{items.attributes.category}}
+            @bed={{items.attributes.bedrooms}}
+            @location={{items.attributes.city}}
+        />
+    </li>
+    {{/each}}
+</ul>
