@@ -1,1 +1,12 @@
 temp hbs file
+<article class="bg-primary p-5 m-2 clearfix">
+    <div class="float-right">
+        <img src="../ember.png" alt="ember" class="rounded" height="150" width="150">
+    </div>  
+    <h1><b>{{@text}}</b></h1>
+    <p>{{{@content}}}</p>
+    {{yield}}
+    <LinkTo @route={{@route_name}} class="btn-primary rounded p-3 text-decoration-none h5 mt-2">
+        {{@r_text}}
+    </LinkTo>
+</article>
